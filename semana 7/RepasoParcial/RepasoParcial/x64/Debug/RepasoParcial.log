@@ -1,0 +1,4 @@
+﻿  main.cpp
+C:\Users\HP\Documents\GitHub\Talleres-AED-2023-01\semana 7\RepasoParcial\RepasoParcial\Utilidades.hpp(18,30): warning C4018: '<': signed/unsigned mismatch
+C:\Users\HP\Documents\GitHub\Talleres-AED-2023-01\semana 7\RepasoParcial\RepasoParcial\main.cpp(10,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  RepasoParcial.vcxproj -> C:\Users\HP\Documents\GitHub\Talleres-AED-2023-01\semana 7\RepasoParcial\x64\Debug\RepasoParcial.exe
