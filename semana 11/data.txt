@@ -1,0 +1,5 @@
+1,continent,location1,1000,20,400,100
+2,continent,location2,1200,10,500,90
+3,continent,location3,1500,50,200,500
+4,continent,location4,1400,70,600,200
+5,continent,location5,1700,40,850,700

@@ -25,7 +25,7 @@ public:
         int index = _hashFunction(key);
         auto list = _hashTable[index];
         T value = _hashTable[index]->getByCriteria([&](Element e) -> bool {
-            return e.key = key;
+            return e.key == key;
         });
         return value;
     }
@@ -33,7 +33,7 @@ public:
         int index = _hashFunction(key);
         auto list = _hashTable[index];
         T value = _hashTable[index]->getByCriteria([&](Element e) -> bool {
-            return e.key = key;
+            return e.key == key;
         });
         return value;
     }

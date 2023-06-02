@@ -6,7 +6,7 @@
 template<class T>
 class BinarySearchTree {
 public:
-    BinarySearchTree(std::function<void(T)> show, std::function<bool(T,T)> compare): _show(show), _compare(compare) {
+    BinarySearchTree(std::function<void(T)> show, std::function<bool(T,T)> compare, std::function<bool(T,T)> equals): _show(show), _compare(compare), _equals(equals) {
         _root = nullptr;
         _size = 0ll;
     }
@@ -41,12 +41,14 @@ private:
     size_t _size;
     std::function<void(T)> _show;
     std::function<bool(T,T)> _compare;
+    std::function<bool(T,T)> _equals;
 private:
     void _insert(Node*& n, T value) {
         if(n == nullptr) {
             n = new Node{value, nullptr, nullptr};
             return;
         }
+        if(_equals(n->value, value)) return;
         if(_compare(n->value,value)) _insert(n->leftChild,value);
         else _insert(n->rightChild,value);
     }
