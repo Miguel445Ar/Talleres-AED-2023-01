@@ -43,6 +43,9 @@ public:
     unsigned int getTotalCasesPerMillion() {
         return this->total_cases_per_million;
     }
+    string getIsoCode() {
+        return this->iso_code;
+    }
 };
 
 class Diagnostico {
@@ -99,7 +102,7 @@ public:
             // cout << r << "\n";
             this->arbol->insert(r);
             this->colaPrioridad->push(r);
-            this->hashTable->insert(iso_code + location, r);
+            this->hashTable->insert(r.getIsoCode() + r.getLocation(), r);
         }
         this->arbol->preOrder();
         Registro rMax = this->arbol->max();
